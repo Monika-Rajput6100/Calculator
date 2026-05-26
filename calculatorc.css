@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "SF Pro Display", Arial, sans-serif;
+  background: #e0f2ff;
+  transition: background 0.5s ease;
+}
+
+.calculator {
+  width: 340px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.display {
+  padding: 30px;
+  font-size: 2.2rem;
+  text-align: right;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.calculator.light {
+  background: #ffffff;
+  color: #000000;
+}
+
+.calculator.light .display {
+  background: #f9f9f9;
+  color: #000000;
+}
+
+.calculator.light button {
+  background: #e6f1fc;
+  color: #000000;
+}
+
+.calculator.light button:hover {
+  background: #c1d2e9;
+}
+
+.calculator.light button.operator {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.calculator.light button.equals {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.calculator.dark {
+  background: #111827;
+  color: #ffffff;
+}
+
+.calculator.dark .display {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.calculator.dark button {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.calculator.dark button:hover {
+  background: #374151;
+}
+
+.calculator.dark button.operator {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.calculator.dark button.equals {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.toggle {
+  width: 100%;
+  padding: 18px;
+  font-size: 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 0 25px 25px;
+  transition: background 0.3s ease;
+}
+
+.toggle:hover {
+  background: #2563eb;
+}
